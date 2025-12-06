@@ -42,29 +42,27 @@ backToTopButton.addEventListener('click', () => {
 });
 
 // Mobile Menu Logic
+// Mobile Menu Logic
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileMenuLinks = mobileMenu.querySelectorAll('a');
 
 if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-
-        // Optional: Animate hamburger icon or change icon to 'X'
-        // This simple implementation just toggles the menu visibility
+        mobileMenu.classList.toggle('open');
     });
 
     // Close menu when a link is clicked
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('open');
         });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('open');
         }
     });
 }
