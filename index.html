@@ -130,33 +130,27 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative bg-white dark:bg-gray-900 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 hero-bg-image bg-cover bg-center opacity-10 dark:opacity-20 mix-blend-overlay">
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-overlay-bg">
+            <div class="hero-bg-layer-1 hero-bg-image">
             </div>
-            <div
-                class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/50 dark:from-gray-900/95 dark:to-gray-900/80">
+            <div class="hero-bg-layer-2">
             </div>
         </div>
 
-        <div
-            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col items-center text-center">
-            <h1
-                class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6 animate-fade-in">
-                Hi, I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Kafeel
-                    Ahamed</span>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">
+                Hi, I'm <span class="hero-text-gradient">Kafeel Ahamed</span>
             </h1>
-            <p
-                class="mt-4 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10 animate-slide-up-delay-1 opacity-0">
+            <p class="hero-subtitle animate-slide-up-delay-1 opacity-0">
                 Digital Marketing Professional | Frontend Developer | UI/UX Designer
             </p>
             <div class="flex flex-col sm:flex-row gap-4 animate-slide-up-delay-2 opacity-0">
-                <a href="contact.html"
-                    class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 md:text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                <a href="contact.html" class="btn btn-primary">
                     Hire Me
                 </a>
-                <a href="#experience"
-                    class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-full text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 md:text-lg transition-all">
+                <a href="#experience" class="btn btn-secondary">
                     View Work
                 </a>
             </div>
@@ -164,13 +158,13 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 relative inline-block">
+    <section id="about" class="about-section section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">
                 About Me
-                <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500 transform scale-x-50"></span>
+                <span class="section-title-underline"></span>
             </h2>
-            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-12">
+            <p class="about-text">
                 A dedicated digital marketing professional with over 1.5 years of experience, passionate about frontend
                 development and design. Skilled in frontend technologies, Adobe Creative Suite, social media management,
                 content creation, and UI/UX design. Excels at blending analytical skills with creativity to enhance user
@@ -179,52 +173,46 @@
                 environment.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div
-                    class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800 hover:shadow-md transition-shadow">
-                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full text-blue-600 dark:text-blue-300">
+            <div class="about-grid">
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
                         <i class="fas fa-envelope fa-lg"></i>
                     </div>
                     <div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                        <a href="mailto:kafeelahamed444@gmail.com"
-                            class="text-gray-900 dark:text-white font-medium hover:text-blue-600">kafeelahamed444@gmail.com</a>
+                        <p class="contact-label">Email</p>
+                        <a href="mailto:kafeelahamed444@gmail.com" class="contact-link">kafeelahamed444@gmail.com</a>
                     </div>
                 </div>
 
-                <div
-                    class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800 hover:shadow-md transition-shadow">
-                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full text-blue-600 dark:text-blue-300">
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
                         <i class="fas fa-phone fa-lg"></i>
                     </div>
                     <div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
-                        <a href="tel:8072553340"
-                            class="text-gray-900 dark:text-white font-medium hover:text-blue-600">8072553340</a>
+                        <p class="contact-label">Phone</p>
+                        <a href="tel:8072553340" class="contact-link">8072553340</a>
                     </div>
                 </div>
 
-                <div
-                    class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800 hover:shadow-md transition-shadow">
-                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full text-blue-600 dark:text-blue-300">
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
                         <i class="fab fa-linkedin fa-lg"></i>
                     </div>
                     <div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
+                        <p class="contact-label">LinkedIn</p>
                         <a href="https://www.linkedin.com/in/kafeel-ahamed-561313282" target="_blank"
-                            class="text-gray-900 dark:text-white font-medium hover:text-blue-600">View Profile</a>
+                            class="contact-link">View Profile</a>
                     </div>
                 </div>
 
-                <div
-                    class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800 hover:shadow-md transition-shadow">
-                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full text-blue-600 dark:text-blue-300">
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
                         <i class="fas fa-globe fa-lg"></i>
                     </div>
                     <div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Website</p>
+                        <p class="contact-label">Website</p>
                         <a href="https://www.kafeelahamed.com" target="_blank"
-                            class="text-gray-900 dark:text-white font-medium hover:text-blue-600">www.kafeelahamed.com</a>
+                            class="contact-link">www.kafeelahamed.com</a>
                     </div>
                 </div>
             </div>
@@ -232,25 +220,23 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">Professional Experience</h2>
+    <section id="experience" class="experience-section section-padding">
+        <div class="container w-full max-w-6xl mx-auto">
+            <h2 class="section-title">Professional Experience</h2>
 
-            <div class="space-y-8">
+            <div class="experience-list">
                 <!-- Job 1 -->
-                <div
-                    class="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600">
-                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-6">
+                <div class="experience-card">
+                    <div class="experience-header">
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Digital Marketing Manager</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium">Quickscore India Pvt Ltd</p>
+                            <h3 class="experience-role">Digital Marketing Manager</h3>
+                            <p class="experience-company">Quickscore India Pvt Ltd</p>
                         </div>
-                        <span
-                            class="inline-flex items-center px-4 py-2 mt-4 md:mt-0 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+                        <span class="experience-date">
                             Oct 2024 - Feb 2025
                         </span>
                     </div>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 dark:text-gray-300">
+                    <ul class="experience-points">
                         <li>Designed and optimized responsive web interfaces using HTML, CSS, and JavaScript, optimizing
                             UI/UX for a seamless user experience.</li>
                         <li>Created branding materials, brochures, posters, and promotional videos, ensuring a cohesive
@@ -265,20 +251,17 @@
                 </div>
 
                 <!-- Job 2 -->
-                <div
-                    class="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600">
-                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-6">
+                <div class="experience-card">
+                    <div class="experience-header">
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Digital Marketing Executive
-                            </h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium">R soft Technologies</p>
+                            <h3 class="experience-role">Digital Marketing Executive</h3>
+                            <p class="experience-company">R soft Technologies</p>
                         </div>
-                        <span
-                            class="inline-flex items-center px-4 py-2 mt-4 md:mt-0 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+                        <span class="experience-date">
                             Mar 2023 - Jul 2024
                         </span>
                     </div>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 dark:text-gray-300">
+                    <ul class="experience-points">
                         <li>Designed and optimized responsive web interfaces using HTML, CSS, and JavaScript.</li>
                         <li>Created branding materials, brochures, posters, and promotional videos.</li>
                         <li>Managed social media accounts to enhance brand presence.</li>
@@ -288,19 +271,17 @@
                 </div>
 
                 <!-- Job 3 -->
-                <div
-                    class="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600">
-                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-6">
+                <div class="experience-card">
+                    <div class="experience-header">
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">SEO Analyst</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium">R soft Technologies</p>
+                            <h3 class="experience-role">SEO Analyst</h3>
+                            <p class="experience-company">R soft Technologies</p>
                         </div>
-                        <span
-                            class="inline-flex items-center px-4 py-2 mt-4 md:mt-0 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+                        <span class="experience-date">
                             Mar 2023 - Jul 2024
                         </span>
                     </div>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 dark:text-gray-300">
+                    <ul class="experience-points">
                         <li>Designed and optimized website UI using HTML, CSS.</li>
                         <li>Utilized Adobe Photoshop, Illustrator, and video tools for content creation.</li>
                         <li>Developed innovative design packages for on-brand marketing materials.</li>
@@ -311,43 +292,38 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">Expertise & Skills</h2>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Expertise & Skills</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="skills-grid">
                 <!-- Skill Card 1 -->
-                <div
-                    class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center hover:bg-white dark:hover:bg-gray-700 hover:shadow-2xl transition-all duration-300 group cursor-default">
-                    <div
-                        class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mb-6 group-hover:scale-110 transition-transform">
+                <div class="skill-card group">
+                    <div class="skill-icon-wrapper skill-icon-dev">
                         <i class="fas fa-code fa-2x"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Development</h3>
-                    <p class="text-gray-600 dark:text-gray-300">HTML, CSS, JavaScript, Figma</p>
+                    <h3 class="skill-title">Development</h3>
+                    <p class="skill-desc">HTML, CSS, JavaScript, Figma</p>
                 </div>
 
                 <!-- Skill Card 2 -->
-                <div
-                    class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center hover:bg-white dark:hover:bg-gray-700 hover:shadow-2xl transition-all duration-300 group cursor-default">
-                    <div
-                        class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 mb-6 group-hover:scale-110 transition-transform">
+                <div class="skill-card group">
+                    <div class="skill-icon-wrapper skill-icon-design">
                         <i class="fas fa-paint-brush fa-2x"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Design</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Adobe Illustrator, Photoshop, Premiere Pro, After
+                    <h3 class="skill-title">Design</h3>
+                    <p class="skill-desc">Adobe Illustrator, Photoshop, Premiere Pro, After
                         Effects, Branding</p>
                 </div>
 
                 <!-- Skill Card 3 -->
-                <div
-                    class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center hover:bg-white dark:hover:bg-gray-700 hover:shadow-2xl transition-all duration-300 group cursor-default">
-                    <div
-                        class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mb-6 group-hover:scale-110 transition-transform">
+                <div class="skill-card group">
+                    <div class="skill-icon-wrapper skill-icon-marketing">
                         <i class="fas fa-bullhorn fa-2x"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Marketing</h3>
-                    <p class="text-gray-600 dark:text-gray-300">SEO, SEM, SMM, Content Strategy, Social Media Management
+                    <h3 class="skill-title">Marketing</h3>
+                    <p class="skill-desc">SEO, SEM, SMM, Content Strategy, Social Media Management
                     </p>
                 </div>
             </div>
@@ -355,85 +331,84 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">Education</h2>
+    <section id="education" class="education-section section-padding">
+        <div class="container w-full max-w-6xl mx-auto">
+            <h2 class="section-title">Education</h2>
 
-            <div class="space-y-6">
-                <div
-                    class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
-                    <div>
-                        <h4 class="text-xl font-bold text-gray-900 dark:text-white">BSc, Information Technology</h4>
-                        <p class="text-gray-500 dark:text-gray-400">The New College, Chennai</p>
+            <div class="experience-list">
+                <!-- Education Item 1 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-role">MBA in Marketing Management</h3>
+                            <p class="experience-company">Alagappa University</p>
+                        </div>
+                        <span class="experience-date">
+                            2022 - 2024
+                        </span>
                     </div>
-                    <span
-                        class="mt-2 sm:mt-0 px-4 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded-full text-sm font-medium">2020
-                        - 2023</span>
                 </div>
 
-                <div
-                    class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
-                    <div>
-                        <h4 class="text-xl font-bold text-gray-900 dark:text-white">MCA (Distance)</h4>
-                        <p class="text-gray-500 dark:text-gray-400">Crescent University, Chennai</p>
+                <!-- Education Item 2 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-role">BBA</h3>
+                            <p class="experience-company">Jamal Mohamed College (Autonomous)</p>
+                        </div>
+                        <span class="experience-date">
+                            2019 - 2022
+                        </span>
                     </div>
-                    <span
-                        class="mt-2 sm:mt-0 px-4 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded-full text-sm font-medium">Pursuing</span>
                 </div>
 
-                <div
-                    class="bg-gradient-to-r from-gray-900 to-gray-800 p-6 rounded-lg shadow-md flex items-center justify-between text-white">
-                    <div>
-                        <h4 class="text-xl font-bold">Google Digital Marketing Certification</h4>
-                        <p class="text-gray-400 text-sm">Professional Certification</p>
+                <!-- Certification -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <h3 class="experience-role">Google Digital Marketing Certification</h3>
+                                <p class="experience-company">Google Digital Unlocked</p>
+                            </div>
+                            <img src="assets/svg/841315.svg" alt="Google Certification" class="w-20 h-20">
+                        </div>
+                        <span class="experience-date">
+                            2023
+                        </span>
                     </div>
-                    <img src="assets/svg/841315.svg" alt="Google Certification" class="w-20 h-20">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Kafeel Ahamed</h3>
-                    <p class="text-gray-400">Building digital experiences and marketing strategies that drive growth.
-                    </p>
-                </div>
-                <div class="flex flex-col space-y-2">
-                    <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
-                    <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
-                    <a href="#experience" class="text-gray-400 hover:text-white transition-colors">Experience</a>
-                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/kafeel-ahamed-561313282" target="_blank"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:kafeelahamed444@gmail.com"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://www.kafeelahamed.com" target="_blank"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fas fa-globe"></i>
-                        </a>
-                    </div>
-                </div>
+    <footer class="footer-section">
+        <div class="container footer-content">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <p class="footer-text">
+                    &copy; 2024 Kafeel Ahamed. All rights reserved.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                    Designed & Built with <i class="fas fa-heart text-red-500 mx-1"></i> by Kafeel
+                </p>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                &copy; 2024 Kafeel Ahamed. All Rights Reserved.
+
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/kafeel-ahamed-561313282" target="_blank"
+                    class="footer-social-link">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="mailto:kafeelahamed444@gmail.com" class="footer-social-link">
+                    <i class="fas fa-envelope fa-lg"></i>
+                </a>
+                <a href="tel:8072553340" class="footer-social-link">
+                    <i class="fas fa-phone fa-lg"></i>
+                </a>
             </div>
         </div>
 
         <!-- Back to Top Button -->
-        <button id="back-to-top"
-            class="hidden fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition-all z-50 animate-bounce">
+        <button id="back-to-top" class="back-to-top">
             <i class="fas fa-arrow-up"></i>
         </button>
     </footer>
