@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Kafeel Ahamed</title>
+    <meta name="description"
+        content="Get in touch with Kafeel Ahamed. Contact for Digital Marketing and Frontend Development opportunities.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body
+    class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <!-- Navigation (Simplified for subpages) -->
+    <nav
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800 shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">
+                        KAFEEL AHAMED
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"><i
+                            class="fas fa-home mr-2"></i>Home</a>
+                    <a href="contact.html"
+                        class="text-blue-600 font-medium hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"><i
+                            class="fas fa-envelope mr-2"></i>Contact</a>
+
+                    <!-- Dark Mode Toggle (Vite Style) -->
+                    <button id="theme-toggle" type="button"
+                        class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 group"
+                        aria-pressed="false">
+                        <span class="sr-only">Use setting</span>
+                        <span aria-hidden="true"
+                            class="pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 translate-x-0 dark:translate-x-5 flex items-center justify-center">
+                            <i class="fas fa-sun text-yellow-400 text-[10px] dark:hidden"></i>
+                            <i class="fas fa-moon text-gray-700 text-[10px] hidden dark:block"></i>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <!-- Mobile Toggle -->
+                    <button id="theme-toggle-mobile" type="button"
+                        class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-700"
+                        aria-pressed="false">
+                        <span class="sr-only">Use setting</span>
+                        <span aria-hidden="true"
+                            class="pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 translate-x-0 dark:translate-x-5 flex items-center justify-center">
+                            <i class="fas fa-sun text-yellow-400 text-[10px] dark:hidden"></i>
+                            <i class="fas fa-moon text-gray-700 text-[10px] hidden dark:block"></i>
+                        </span>
+                    </button>
+
+                    <!-- Mobile Menu Icon (Placeholder functionality) -->
+                    <button
+                        class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-blue-600 dark:bg-blue-800 text-white py-16 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-4 animate-[fadeIn_1s_ease-out_forwards]">Get In Touch</h1>
+            <p class="text-xl text-blue-100">Let's discuss how I can help your business grow.</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <main class="flex-grow py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm h-full">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Contact Information</h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300 mt-1">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</p>
+                                <a href="tel:8072553340"
+                                    class="text-lg font-medium text-gray-900 dark:text-white hover:text-blue-600">8072553340</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Email</p>
+                                <a href="mailto:kafeelahamed444@gmail.com"
+                                    class="text-lg font-medium text-gray-900 dark:text-white hover:text-blue-600">kafeelahamed444@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300 mt-1">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/kafeel-ahamed-561313282" target="_blank"
+                                    class="text-lg font-medium text-gray-900 dark:text-white hover:text-blue-600">Connect
+                                    on LinkedIn</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300 mt-1">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Website</p>
+                                <a href="https://www.kafeelahamed.com" target="_blank"
+                                    class="text-lg font-medium text-gray-900 dark:text-white hover:text-blue-600">www.kafeelahamed.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm h-full">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Send a Message</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300">Your Name</label>
+                                <input type="text" id="name"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white py-2 px-3"
+                                    required placeHolder="Name">
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300">Your
+                                    Email</label>
+                                <input type="email" id="email"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white py-2 px-3"
+                                    required placeHolder="Email">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300">Subject</label>
+                            <input type="text" id="subject"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white py-2 px-3"
+                                required placeHolder="Subject">
+                        </div>
+                        <div>
+                            <label for="message"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+                            <textarea id="message" rows="4"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white py-2 px-3"
+                                required placeHolder="How can I help you?"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 text-center mt-auto relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-sm text-gray-400">&copy; 2024 Kafeel Ahamed. All Rights Reserved.</p>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top"
+            class="hidden fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition-all z-50 animate-bounce">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
