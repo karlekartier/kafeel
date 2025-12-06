@@ -42,7 +42,6 @@ backToTopButton.addEventListener('click', () => {
 });
 
 // Mobile Menu Logic
-// Mobile Menu Logic
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileMenuLinks = mobileMenu.querySelectorAll('a');

@@ -934,7 +934,7 @@ body.dark {
 }
 
 .mobile-menu-container.open {
-    display: block;
+    display: block !important;
 }
 
 /* Javascript toggle class */
