@@ -18,403 +18,387 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- The class above is essentially "semantic" enough if we just used `body` tag selector in CSS, but user wants NO tailwind classes. -->
+    <!-- Updating to clear classes as style.css handles body styling -->
 
-    <!-- Navigation -->
-    <nav
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800 shadow-sm transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html"
-                        class="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">
-                        KAFEEL AHAMED
+    <body>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="nav-logo">
+                            KAFEEL AHAMED
+                        </a>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="nav-menu-desktop">
+                        <a href="index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a>
+                        <a href="#about" class="nav-link"><i class="fas fa-user"></i>About</a>
+                        <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i>Experience</a>
+                        <a href="#skills" class="nav-link"><i class="fas fa-code"></i>Skills</a>
+                        <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i>Education</a>
+                        <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a>
+
+                        <!-- Dark Mode Toggle -->
+                        <button id="theme-toggle" type="button" class="theme-toggle-btn" aria-pressed="false">
+                            <span class="sr-only">Use setting</span>
+                            <span aria-hidden="true" class="theme-toggle-switch">
+                                <i class="fas fa-sun text-yellow-400 text-[10px] dark:hidden"></i>
+                                <i class="fas fa-moon text-gray-700 text-[10px] hidden dark:block"></i>
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden flex items-center gap-4">
+                        <!-- Mobile Toggle (Theme) -->
+                        <button id="theme-toggle-mobile" type="button" class="theme-toggle-btn" aria-pressed="false">
+                            <span class="sr-only">Use setting</span>
+                            <span aria-hidden="true" class="theme-toggle-switch">
+                                <i class="fas fa-sun text-yellow-400 text-[10px] dark:hidden"></i>
+                                <i class="fas fa-moon text-gray-700 text-[10px] hidden dark:block"></i>
+                            </span>
+                        </button>
+
+                        <button id="mobile-menu-btn" class="mobile-menu-btn">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu-container">
+                <!-- Background Graphic (Optional/Refactored) -->
+                <!-- Removing complex inline SVG/divs for simplicity or moving to CSS if critical.
+                 User said "remove tailwind", so complex Tailwind divs are best replaced or removed if purely decorative.
+                 I will keep the menu items clean. -->
+
+                <div class="container" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+                    <a href="index.html" class="mobile-nav-link">
+                        <i class="fas fa-home mr-3 w-6 text-center"></i>Home
+                    </a>
+                    <a href="#about" class="mobile-nav-link">
+                        <i class="fas fa-user mr-3 w-6 text-center"></i>About
+                    </a>
+                    <a href="#experience" class="mobile-nav-link">
+                        <i class="fas fa-briefcase mr-3 w-6 text-center"></i>Experience
+                    </a>
+                    <a href="#skills" class="mobile-nav-link">
+                        <i class="fas fa-code mr-3 w-6 text-center"></i>Skills
+                    </a>
+                    <a href="#education" class="mobile-nav-link">
+                        <i class="fas fa-graduation-cap mr-3 w-6 text-center"></i>Education
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope mr-3 w-6 text-center"></i>Contact
                     </a>
                 </div>
+            </div>
+        </nav>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html"
-                        class="text-blue-600 font-medium hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"><i
-                            class="fas fa-home mr-2"></i>Home</a>
-                    <a href="#about"
-                        class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"><i
-                            class="fas fa-user mr-2"></i>About</a>
-                    <a href="#experience"
-                        class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"><i
-                            class="fas fa-briefcase mr-2"></i>Experience</a>
-                    <a href="#skills"
-                        class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"><i
-                            class="fas fa-code mr-2"></i>Skills</a>
-                    <a href="#education"
-                        class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"><i
-                            class="fas fa-graduation-cap mr-2"></i>Education</a>
-                    <a href="contact.html"
-                        class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"><i
-                            class="fas fa-envelope mr-2"></i>Contact</a>
-
-                    <!-- Dark Mode Toggle (Vite Style) -->
-                    <button id="theme-toggle" type="button"
-                        class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 group"
-                        aria-pressed="false">
-                        <span class="sr-only">Use setting</span>
-                        <span aria-hidden="true"
-                            class="pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 translate-x-0 dark:translate-x-5 flex items-center justify-center">
-                            <i class="fas fa-sun text-yellow-400 text-[10px] dark:hidden"></i>
-                            <i class="fas fa-moon text-gray-700 text-[10px] hidden dark:block"></i>
-                        </span>
-                    </button>
+        <!-- Hero Section -->
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="hero-overlay-bg">
+                <div class="hero-bg-layer-1 hero-bg-image">
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <!-- Mobile Toggle -->
-                    <button id="theme-toggle-mobile" type="button"
-                        class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-700"
-                        aria-pressed="false">
-                        <span class="sr-only">Use setting</span>
-                        <span aria-hidden="true"
-                            class="pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 translate-x-0 dark:translate-x-5 flex items-center justify-center">
-                            <i class="fas fa-sun text-yellow-400 text-[10px] dark:hidden"></i>
-                            <i class="fas fa-moon text-gray-700 text-[10px] hidden dark:block"></i>
-                        </span>
-                    </button>
-
-                    <button id="mobile-menu-btn"
-                        class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+                <div class="hero-bg-layer-2">
                 </div>
             </div>
-        </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu"
-            class="hidden md:hidden absolute top-16 left-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 shadow-lg z-40 overflow-hidden transition-all duration-300 ease-in-out">
-            <!-- Background Graphic -->
-            <div class="absolute inset-0 z-0 opacity-10 pointer-events-none overflow-hidden">
-                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-500 blur-3xl"></div>
-                <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-indigo-500 blur-3xl"></div>
-            </div>
-
-            <div class="relative z-10 px-4 py-6 space-y-4">
-                <a href="index.html"
-                    class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800 rounded-lg transition-colors">
-                    <i class="fas fa-home mr-3 w-6 text-center"></i>Home
-                </a>
-                <a href="#about"
-                    class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800 rounded-lg transition-colors">
-                    <i class="fas fa-user mr-3 w-6 text-center"></i>About
-                </a>
-                <a href="#experience"
-                    class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800 rounded-lg transition-colors">
-                    <i class="fas fa-briefcase mr-3 w-6 text-center"></i>Experience
-                </a>
-                <a href="#skills"
-                    class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800 rounded-lg transition-colors">
-                    <i class="fas fa-code mr-3 w-6 text-center"></i>Skills
-                </a>
-                <a href="#education"
-                    class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800 rounded-lg transition-colors">
-                    <i class="fas fa-graduation-cap mr-3 w-6 text-center"></i>Education
-                </a>
-                <a href="contact.html"
-                    class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800 rounded-lg transition-colors">
-                    <i class="fas fa-envelope mr-3 w-6 text-center"></i>Contact
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="hero-overlay-bg">
-            <div class="hero-bg-layer-1 hero-bg-image">
-            </div>
-            <div class="hero-bg-layer-2">
-            </div>
-        </div>
-
-        <div class="hero-content">
-            <h1 class="hero-title animate-fade-in">
-                Hi, I'm <span class="hero-text-gradient">Kafeel Ahamed</span>
-            </h1>
-            <p class="hero-subtitle animate-slide-up-delay-1 opacity-0">
-                Digital Marketing Professional | Frontend Developer | UI/UX Designer
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 animate-slide-up-delay-2 opacity-0">
-                <a href="contact.html" class="btn btn-primary">
-                    Hire Me
-                </a>
-                <a href="#experience" class="btn btn-secondary">
-                    View Work
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="about-section section-padding">
-        <div class="container text-center">
-            <h2 class="section-title">
-                About Me
-                <span class="section-title-underline"></span>
-            </h2>
-            <p class="about-text">
-                A dedicated digital marketing professional with over 1.5 years of experience, passionate about frontend
-                development and design. Skilled in frontend technologies, Adobe Creative Suite, social media management,
-                content creation, and UI/UX design. Excels at blending analytical skills with creativity to enhance user
-                engagement and brand presence. Committed to continuous learning and adapting to the latest digital
-                trends and technologies. Seeking an opportunity to apply technical and marketing expertise in a dynamic
-                environment.
-            </p>
-
-            <div class="about-grid">
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i class="fas fa-envelope fa-lg"></i>
-                    </div>
-                    <div>
-                        <p class="contact-label">Email</p>
-                        <a href="mailto:kafeelahamed444@gmail.com" class="contact-link">kafeelahamed444@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i class="fas fa-phone fa-lg"></i>
-                    </div>
-                    <div>
-                        <p class="contact-label">Phone</p>
-                        <a href="tel:8072553340" class="contact-link">8072553340</a>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </div>
-                    <div>
-                        <p class="contact-label">LinkedIn</p>
-                        <a href="https://www.linkedin.com/in/kafeel-ahamed-561313282" target="_blank"
-                            class="contact-link">View Profile</a>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i class="fas fa-globe fa-lg"></i>
-                    </div>
-                    <div>
-                        <p class="contact-label">Website</p>
-                        <a href="https://www.kafeelahamed.com" target="_blank"
-                            class="contact-link">www.kafeelahamed.com</a>
-                    </div>
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in">
+                    Hi, I'm <span class="hero-text-gradient">Kafeel Ahamed</span>
+                </h1>
+                <p class="hero-subtitle animate-slide-up-delay-1 opacity-0">
+                    Digital Marketing Professional | Frontend Developer | UI/UX Designer
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 animate-slide-up-delay-2 opacity-0">
+                    <a href="contact.html" class="btn btn-primary">
+                        Hire Me
+                    </a>
+                    <a href="#experience" class="btn btn-secondary">
+                        View Work
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section section-padding">
-        <div class="container w-full max-w-6xl mx-auto">
-            <h2 class="section-title">Professional Experience</h2>
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">
+                    About Me
+                    <span class="section-title-underline"></span>
+                </h2>
+                <p class="about-text">
+                    A dedicated digital marketing professional with over 1.5 years of experience, passionate about
+                    frontend
+                    development and design. Skilled in frontend technologies, Adobe Creative Suite, social media
+                    management,
+                    content creation, and UI/UX design. Excels at blending analytical skills with creativity to enhance
+                    user
+                    engagement and brand presence. Committed to continuous learning and adapting to the latest digital
+                    trends and technologies. Seeking an opportunity to apply technical and marketing expertise in a
+                    dynamic
+                    environment.
+                </p>
 
-            <div class="experience-list">
-                <!-- Job 1 -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-role">Digital Marketing Manager</h3>
-                            <p class="experience-company">Quickscore India Pvt Ltd</p>
+                <div class="about-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-envelope fa-lg"></i>
                         </div>
-                        <span class="experience-date">
-                            Oct 2024 - Feb 2025
-                        </span>
-                    </div>
-                    <ul class="experience-points">
-                        <li>Designed and optimized responsive web interfaces using HTML, CSS, and JavaScript, optimizing
-                            UI/UX for a seamless user experience.</li>
-                        <li>Created branding materials, brochures, posters, and promotional videos, ensuring a cohesive
-                            and engaging visual identity.</li>
-                        <li>Managed social media accounts, crafting compelling content and visuals to enhance brand
-                            presence and audience engagement.</li>
-                        <li>Executed email marketing campaigns using Brevo, optimizing reach, engagement, and conversion
-                            rates.</li>
-                        <li>Oversaw website management, ensuring smooth functionality, regular updates, and performance
-                            optimization.</li>
-                    </ul>
-                </div>
-
-                <!-- Job 2 -->
-                <div class="experience-card">
-                    <div class="experience-header">
                         <div>
-                            <h3 class="experience-role">Digital Marketing Executive</h3>
-                            <p class="experience-company">R soft Technologies</p>
+                            <p class="contact-label">Email</p>
+                            <a href="mailto:kafeelahamed444@gmail.com"
+                                class="contact-link">kafeelahamed444@gmail.com</a>
                         </div>
-                        <span class="experience-date">
-                            Mar 2023 - Jul 2024
-                        </span>
                     </div>
-                    <ul class="experience-points">
-                        <li>Designed and optimized responsive web interfaces using HTML, CSS, and JavaScript.</li>
-                        <li>Created branding materials, brochures, posters, and promotional videos.</li>
-                        <li>Managed social media accounts to enhance brand presence.</li>
-                        <li>Executed email marketing campaigns using Brevo.</li>
-                        <li>Oversaw website management and performance optimization.</li>
-                    </ul>
-                </div>
 
-                <!-- Job 3 -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-role">SEO Analyst</h3>
-                            <p class="experience-company">R soft Technologies</p>
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-phone fa-lg"></i>
                         </div>
-                        <span class="experience-date">
-                            Mar 2023 - Jul 2024
-                        </span>
+                        <div>
+                            <p class="contact-label">Phone</p>
+                            <a href="tel:8072553340" class="contact-link">8072553340</a>
+                        </div>
                     </div>
-                    <ul class="experience-points">
-                        <li>Designed and optimized website UI using HTML, CSS.</li>
-                        <li>Utilized Adobe Photoshop, Illustrator, and video tools for content creation.</li>
-                        <li>Developed innovative design packages for on-brand marketing materials.</li>
-                    </ul>
+
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="contact-label">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/kafeel-ahamed-561313282" target="_blank"
+                                class="contact-link">View Profile</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-globe fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="contact-label">Website</p>
+                            <a href="https://www.kafeelahamed.com" target="_blank"
+                                class="contact-link">www.kafeelahamed.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section section-padding">
-        <div class="container text-center">
-            <h2 class="section-title">Expertise & Skills</h2>
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section section-padding">
+            <div class="container w-full max-w-6xl mx-auto">
+                <h2 class="section-title">Professional Experience</h2>
 
-            <div class="skills-grid">
-                <!-- Skill Card 1 -->
-                <div class="skill-card group">
-                    <div class="skill-icon-wrapper skill-icon-dev">
-                        <i class="fas fa-code fa-2x"></i>
+                <div class="experience-list">
+                    <!-- Job 1 -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-role">Digital Marketing Manager</h3>
+                                <p class="experience-company">Quickscore India Pvt Ltd</p>
+                            </div>
+                            <span class="experience-date">
+                                Oct 2024 - Feb 2025
+                            </span>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Designed and optimized responsive web interfaces using HTML, CSS, and JavaScript,
+                                optimizing
+                                UI/UX for a seamless user experience.</li>
+                            <li>Created branding materials, brochures, posters, and promotional videos, ensuring a
+                                cohesive
+                                and engaging visual identity.</li>
+                            <li>Managed social media accounts, crafting compelling content and visuals to enhance brand
+                                presence and audience engagement.</li>
+                            <li>Executed email marketing campaigns using Brevo, optimizing reach, engagement, and
+                                conversion
+                                rates.</li>
+                            <li>Oversaw website management, ensuring smooth functionality, regular updates, and
+                                performance
+                                optimization.</li>
+                        </ul>
                     </div>
-                    <h3 class="skill-title">Development</h3>
-                    <p class="skill-desc">HTML, CSS, JavaScript, Figma</p>
+
+                    <!-- Job 2 -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-role">Digital Marketing Executive</h3>
+                                <p class="experience-company">R soft Technologies</p>
+                            </div>
+                            <span class="experience-date">
+                                Mar 2023 - Jul 2024
+                            </span>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Designed and optimized responsive web interfaces using HTML, CSS, and JavaScript.</li>
+                            <li>Created branding materials, brochures, posters, and promotional videos.</li>
+                            <li>Managed social media accounts to enhance brand presence.</li>
+                            <li>Executed email marketing campaigns using Brevo.</li>
+                            <li>Oversaw website management and performance optimization.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-role">SEO Analyst</h3>
+                                <p class="experience-company">R soft Technologies</p>
+                            </div>
+                            <span class="experience-date">
+                                Mar 2023 - Jul 2024
+                            </span>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Designed and optimized website UI using HTML, CSS.</li>
+                            <li>Utilized Adobe Photoshop, Illustrator, and video tools for content creation.</li>
+                            <li>Developed innovative design packages for on-brand marketing materials.</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Skill Card 2 -->
-                <div class="skill-card group">
-                    <div class="skill-icon-wrapper skill-icon-design">
-                        <i class="fas fa-paint-brush fa-2x"></i>
+        <!-- Skills Section -->
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">Expertise & Skills</h2>
+
+                <div class="skills-grid">
+                    <!-- Skill Card 1 -->
+                    <div class="skill-card group">
+                        <div class="skill-icon-wrapper skill-icon-dev">
+                            <i class="fas fa-code fa-2x"></i>
+                        </div>
+                        <h3 class="skill-title">Development</h3>
+                        <p class="skill-desc">HTML, CSS, JavaScript, Figma</p>
                     </div>
-                    <h3 class="skill-title">Design</h3>
-                    <p class="skill-desc">Adobe Illustrator, Photoshop, Premiere Pro, After
-                        Effects, Branding</p>
+
+                    <!-- Skill Card 2 -->
+                    <div class="skill-card group">
+                        <div class="skill-icon-wrapper skill-icon-design">
+                            <i class="fas fa-paint-brush fa-2x"></i>
+                        </div>
+                        <h3 class="skill-title">Design</h3>
+                        <p class="skill-desc">Adobe Illustrator, Photoshop, Premiere Pro, After
+                            Effects, Branding</p>
+                    </div>
+
+                    <!-- Skill Card 3 -->
+                    <div class="skill-card group">
+                        <div class="skill-icon-wrapper skill-icon-marketing">
+                            <i class="fas fa-bullhorn fa-2x"></i>
+                        </div>
+                        <h3 class="skill-title">Marketing</h3>
+                        <p class="skill-desc">SEO, SEM, SMM, Content Strategy, Social Media Management
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Skill Card 3 -->
-                <div class="skill-card group">
-                    <div class="skill-icon-wrapper skill-icon-marketing">
-                        <i class="fas fa-bullhorn fa-2x"></i>
+        <!-- Education Section -->
+        <section id="education" class="education-section section-padding">
+            <div class="container w-full max-w-6xl mx-auto">
+                <h2 class="section-title">Education</h2>
+
+                <div class="experience-list">
+                    <!-- Education Item 1 -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-role">MBA in Marketing Management</h3>
+                                <p class="experience-company">Alagappa University</p>
+                            </div>
+                            <span class="experience-date">
+                                2022 - 2024
+                            </span>
+                        </div>
                     </div>
-                    <h3 class="skill-title">Marketing</h3>
-                    <p class="skill-desc">SEO, SEM, SMM, Content Strategy, Social Media Management
+
+                    <!-- Education Item 2 -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-role">BBA</h3>
+                                <p class="experience-company">Jamal Mohamed College (Autonomous)</p>
+                            </div>
+                            <span class="experience-date">
+                                2019 - 2022
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Certification -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="flex items-center gap-4">
+                                <div>
+                                    <h3 class="experience-role">Google Digital Marketing Certification</h3>
+                                    <p class="experience-company">Google Digital Unlocked</p>
+                                </div>
+                                <img src="assets/svg/841315.svg" alt="Google Certification" class="w-20 h-20">
+                            </div>
+                            <span class="experience-date">
+                                2023
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="container footer-content">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p class="footer-text">
+                        &copy; 2024 Kafeel Ahamed. All rights reserved.
+                    </p>
+                    <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                        Designed & Built with <i class="fas fa-heart text-red-500 mx-1"></i> by Kafeel
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section section-padding">
-        <div class="container w-full max-w-6xl mx-auto">
-            <h2 class="section-title">Education</h2>
-
-            <div class="experience-list">
-                <!-- Education Item 1 -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-role">MBA in Marketing Management</h3>
-                            <p class="experience-company">Alagappa University</p>
-                        </div>
-                        <span class="experience-date">
-                            2022 - 2024
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Education Item 2 -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-role">BBA</h3>
-                            <p class="experience-company">Jamal Mohamed College (Autonomous)</p>
-                        </div>
-                        <span class="experience-date">
-                            2019 - 2022
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Certification -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="flex items-center gap-4">
-                            <div>
-                                <h3 class="experience-role">Google Digital Marketing Certification</h3>
-                                <p class="experience-company">Google Digital Unlocked</p>
-                            </div>
-                            <img src="assets/svg/841315.svg" alt="Google Certification" class="w-20 h-20">
-                        </div>
-                        <span class="experience-date">
-                            2023
-                        </span>
-                    </div>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/kafeel-ahamed-561313282" target="_blank"
+                        class="footer-social-link">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="mailto:kafeelahamed444@gmail.com" class="footer-social-link">
+                        <i class="fas fa-envelope fa-lg"></i>
+                    </a>
+                    <a href="tel:8072553340" class="footer-social-link">
+                        <i class="fas fa-phone fa-lg"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer-section">
-        <div class="container footer-content">
-            <div class="text-center md:text-left mb-4 md:mb-0">
-                <p class="footer-text">
-                    &copy; 2024 Kafeel Ahamed. All rights reserved.
-                </p>
-                <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">
-                    Designed & Built with <i class="fas fa-heart text-red-500 mx-1"></i> by Kafeel
-                </p>
-            </div>
+            <!-- Back to Top Button -->
+            <button id="back-to-top" class="back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </footer>
 
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/kafeel-ahamed-561313282" target="_blank"
-                    class="footer-social-link">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-                <a href="mailto:kafeelahamed444@gmail.com" class="footer-social-link">
-                    <i class="fas fa-envelope fa-lg"></i>
-                </a>
-                <a href="tel:8072553340" class="footer-social-link">
-                    <i class="fas fa-phone fa-lg"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- Back to Top Button -->
-        <button id="back-to-top" class="back-to-top">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-    </footer>
-
-    <!-- Main JS -->
-    <script src="js/main.js"></script>
-</body>
+        <!-- Main JS -->
+        <script src="js/main.js"></script>
+    </body>
 
 </html>
